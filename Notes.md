@@ -60,7 +60,7 @@ Prediction: 1.922 seconds
 
 _Accuracy on example: 0.97725  
 Using only 1% of the available features: 0.96645  
-&nbsp;&nbps;(/tools/email_preprocess.py `SelectPercentile(..., percentile=1)`): yields less complex tree  
+&nbsp;&nbsp;./tools/email_preprocess.py `SelectPercentile(..., percentile=1)`: yields less complex tree_  
 
 <hr>
 
