@@ -52,7 +52,15 @@ The measure of impurity in a bunch of samples. Entropy = 0 implies all examples 
 High entropy (i.e., entropy = 1) implies all examples are evenly split from different classes (impure)  
 
 **Information Gain**  
-The entropy(parent) minus the weighted average of entropy(children).
+The entropy(parent) minus the weighted average of entropy(children).  
+
+**Time (in seconds)**  
+Training: 97.738 seconds  
+Prediction: 1.922 seconds  
+
+_Accuracy on example: 0.97725  
+Using only 1% of the available features: 0.96645  
+&nbsp;&nbps;(/tools/email_preprocess.py `SelectPercentile(..., percentile=1)`): yields less complex tree  
 
 <hr>
 
