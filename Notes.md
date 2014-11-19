@@ -37,3 +37,14 @@ Reverting back to full dataset with optimized `rbf` and `C` = 10,000: **0.9909**
 Consider if speed is important to you (e.g., flagging credit card fraud, and blocking the transaction before it goes through; voice recognition, like Siri).
 
 <hr>
+
+### Decision Trees
+**Parameters**:  
+`min_samples_split`: Are there enough samples for me to keep splitting?  
+
+**Entropy**  
+\begin{equation}
+  a^2+b^2=c^2
+\end{equation}
+The measure of impurity in a bunch of samples. Entropy = 0 implies all examples are from the same class (pure).
+High entropy (i.e., entropy = 1) implies all examples are evenly split from different classes (impure).
