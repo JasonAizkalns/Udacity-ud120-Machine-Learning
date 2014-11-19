@@ -14,12 +14,12 @@ _Accuracy on example: 0.97383_
 
 <hr>
 ### Support Vector Machines (SVM)
-**Parameters**: `kernel`, `C`, and `gamma`.  
-`C` is the trade-off parameter between a smooth decision boundary and classifying training points correctly (**increasing** `C` yields a *more* complex decision boundary); nevertheless, all of the parameters can effect over-fitting.
-
 (+) Work well in complicated domains where there is a clear margin of separation.  
 (-) Poor with large datasets because training time is cubic (w.r.t. size of dataset).  
 (-) Poor with lots of noise - when the classes are overlapping.  
+
+**Parameters**: `kernel`, `C`, and `gamma`.  
+`C` is the trade-off parameter between a smooth decision boundary and classifying training points correctly (**increasing** `C` yields a *more* complex decision boundary); nevertheless, all of the parameters can effect over-fitting.
 
 **Time (in seconds)**  
 Training: 153.919 seconds  
@@ -39,12 +39,23 @@ Consider if speed is important to you (e.g., flagging credit card fraud, and blo
 <hr>
 
 ### Decision Trees
+(+) Easy to use.  
+(+) Easy to interpret.  
+(+) Ability to build bigger classifiers (ensemble methods).  
+(-) Prone to over-fitting, especially with lots of features.  
+
 **Parameters**:  
 `min_samples_split`: Are there enough samples for me to keep splitting?  
 
 **Entropy**  
-\begin{equation}
-  a^2+b^2=c^2
-\end{equation}
 The measure of impurity in a bunch of samples. Entropy = 0 implies all examples are from the same class (pure).
-High entropy (i.e., entropy = 1) implies all examples are evenly split from different classes (impure).
+High entropy (i.e., entropy = 1) implies all examples are evenly split from different classes (impure)  
+
+**Information Gain**  
+The entropy(parent) minus the weighted average of entropy(children).
+
+<hr>
+
+### Bias & Variance
+**High Bias** practically ignores the data, almost no capacity to learn anything (overly general).  
+**High Variance** extremely perceptive to data; can only replicate things that it has seen before; will react poorly to things it has not seen before (cannot generalize).
