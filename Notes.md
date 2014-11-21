@@ -67,3 +67,10 @@ Using only 1% of the available features: 0.96645
 ### Bias & Variance
 **High Bias** practically ignores the data, almost no capacity to learn anything (overly general).  
 **High Variance** extremely perceptive to data; can only replicate things that it has seen before; will react poorly to things it has not seen before (cannot generalize).
+
+<hr>
+
+### Regression
+There are built-in performance metrics for the `LinearRegression` object in sklearn.  
+For example, `reg = LinearRegression()` will provide `reg.score` to calculate **r-squared**.  
+You can access the `slope` and `intercept` using `reg.coef_` and `reg.intercept_`.  
