@@ -79,3 +79,8 @@ You can access the `slope` and `intercept` using `reg.coef_` and `reg.intercept_
 1. Train original
 2. Remove large residual error points (maybe about 10%)
 3. Re-train
+
+<hr>
+
+### K-Means
+K-Means is a hill-climbing algorithm and is very dependent on where you set your initial clusters!  
