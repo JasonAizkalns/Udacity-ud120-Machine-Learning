@@ -74,3 +74,8 @@ Using only 1% of the available features: 0.96645
 There are built-in performance metrics for the `LinearRegression` object in sklearn.  
 For example, `reg = LinearRegression()` will provide `reg.score` to calculate **r-squared**.  
 You can access the `slope` and `intercept` using `reg.coef_` and `reg.intercept_`.  
+
+**Outlier Detection**
+1. Train original
+2. Remove large residual error points (maybe about 10%)
+3. Re-train

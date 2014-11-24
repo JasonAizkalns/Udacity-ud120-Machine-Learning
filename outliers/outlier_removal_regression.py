@@ -7,12 +7,9 @@ import pickle
 
 from outlier_cleaner import outlierCleaner
 
-
 ### load up some practice data with outliers in it
 ages = pickle.load( open("practice_outliers_ages.pkl", "r") )
 net_worths = pickle.load( open("practice_outliers_net_worths.pkl", "r") )
-
-
 
 ### ages and net_worths need to be reshaped into 2D numpy arrays
 ### second argument of reshape command is a tuple of integers: (n_rows, n_columns)
@@ -25,15 +22,12 @@ ages_train, ages_test, net_worths_train, net_worths_test = train_test_split(ages
 
 ### fill in a regression here!  Name the regression object reg so that
 ### the plotting code below works, and you can see what your regression looks like
-
-
-
-
-
-
-
-
-
+from sklearn.linear_model import LinearRegression
+reg = LinearRegression()
+reg = reg.fit(ages_train, net_worths_train)
+print "Slope:", reg.coef_
+print "Intercept:", reg.intercept_
+print "Score:", reg.score(ages_test, net_worths_test)
 
 
 try:
@@ -52,11 +46,6 @@ try:
 except NameError:
     print "your regression object doesn't exist, or isn't name reg"
     print "can't make predictions to use in identifying outliers"
-
-
-
-
-
 
 
 ### only run this code if cleaned_data is returning data
@@ -81,4 +70,3 @@ if len(cleaned_data) > 0:
 
 else:
     print "outlierCleaner() is returning an empty list, no refitting to be done"
-
